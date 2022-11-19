@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+<style>
+    body {
+        background-image: url('https://img.freepik.com/free-vector/warehouse-interior-with-cardboard-boxes-racks_107791-1633.jpg?w=2000');
+        /* align-items: center; */
+    }
+    </style><br><br>
+<div style="text-align: center;color: rgb(0, 0, 0);">
+    <h5 class="display-4">Inventory Management System for Retailers</h5><br><br>
+    {% if session.logged_in == NULL %}
+        <center><a href="{{ url_for('register') }}" class="btn btn-primary btn-lg" style="margin-top: 250px;">Register</a>
+        <a href="{{ url_for('login') }}" class="btn btn-success btn-lg" style="margin-top: 250px;">Login</a></center>
+    {% endif %}<br>
+    <!-- <center><h5>Created By: Dwaraka kavyasudha, Obul Reddy , Mvs Charan , Sai Lakshmi</h5><center> -->
+</div>
+{% endblock %}
