@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-management-for-retailers
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inventory-management-for-retailers
+  template:
+    metadata:
+      labels:
+        app: inventory-management-for-retailers
+
+    spec:
+      containers:
+        - name: MyBudget-container
+          image: jp.icr.io/inventory-management-for-retailers
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+              protocol: TCP
